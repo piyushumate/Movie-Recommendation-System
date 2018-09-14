@@ -2,7 +2,10 @@
 INF 553 - User Based, Item Based &amp; Model Based CF Movie Recommendation System
 
 Versions
-Spark - 2.2.1 Scala - 2.11 Python - 2.7
+Spark - 2.2.1
+Scala - 2.11
+Python - 2.7
+
 Task 1 : Jaccard Based LSH
 Python command
 
