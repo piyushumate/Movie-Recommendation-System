@@ -78,13 +78,28 @@ spark-submit Piyush_Umate_task2_UserBasedCF.py <rating_file> <testing_file_path>
 Scala command -
 spark-submit --class UserBasedCF Piyush_Umate_hw3.jar <rating_file> <testing_file>
 ML-Latest - Small data Python output
->=0 and <1: 14965 >=1 and <2: 4088 >=2 and <3: 1039 >=3 and <4: 153 >=4: 11
-RMSE: 0.988432740607 Time: 30.9461770058 sec
+>=0 and <1: 14965
+>=1 and <2: 4088
+>=2 and <3: 1039
+>=3 and <4: 153
+>=4: 11
+RMSE: 0.988432740607
+
+Time: 30.9461770058 sec
+
 ML-Latest - Small data Scala output
->=0 and <1: 15070 >=1 and <2: 4000 >=2 and <3: 1023 >=3 and <4: 154 >=4: 9
-RMSE: 0.982381870797202 Time: 54sec
+>=0 and <1: 15070
+>=1 and <2: 4000
+>=2 and <3: 1023
+>=3 and <4: 154
+>=4: 9
+RMSE: 0.982381870797202
+
+Time: 54sec
+
 Description -
 For User Based CF, I used Pearson correlation as the similarity metric. The outliers (outcasts) whose predicted ratings were not within 0 to 5 were fitted in that range by normalization. For certain predicted ratings where Pearson correlation fails, I used imputation boosting to handle them.
+
 Task 2.3 Item Based CF with LSH
 Python command - spark-submit Piyush_Umate_task2_ItemBasedCF.py <rating_file_path> <testing_file_path> <jaccard similar movies>
 Scala command -
