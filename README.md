@@ -55,7 +55,9 @@ ML-20m - Big data Python output
 >=2 and <3: 82068 
 >=3 and <4: 7655 
 >=4: 210
+
 RMSE: 0.817364633871 
+
 Time: 1286.95861316 sec
 
 ML-20m - Big data Scala output
@@ -64,7 +66,10 @@ ML-20m - Big data Scala output
 >=2 and <3: 82029 
 >=3 and <4: 7611 
 >=4: 206
-RMSE: 0.8172113310320842 Time: 545sec
+
+RMSE: 0.8172113310320842
+
+Time: 545sec
 Description -
 For Model Based CF , I used rank as 10 , 12 as the number of iterations and 0.1 as the regularization factor of ALS. I used ParamGridBuilder in tuning different values and then used Regression Evaluator to extract the best parameters.
 
@@ -91,7 +96,9 @@ ML-Latest - Small data Python output
 >=2 and <3: 959
 >=3 and <4: 208
 >=4: 12
+
 RMSE: 1.00286340067
+
 Time: 8.94653177261 sec
 
 ML-Latest - Small data Scala output
@@ -100,6 +107,7 @@ ML-Latest - Small data Scala output
 >=2 and <3: 955
 >=3 and <4: 214
 >=4: 11
+
 RMSE: 1.0049722266060221
 Time: 9sec
 
