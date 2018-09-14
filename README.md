@@ -5,15 +5,24 @@ Versions
 Spark - 2.2.1 Scala - 2.11 Python - 2.7
 Task 1 : Jaccard Based LSH
 Python command
+
 spark-submit Piyush_Umate_task1_Jaccard.py <rating_file_path>
+
 Scala command
+
 spark-submit --class JaccardLSH Piyush_Umate_hw3.jar <rating_file_path>
+
 Python output -
+
 Time: 113.05479598 sec Precision 1.0
+
 Recall 0.815018491384
+
 Scala output Time: 102sec
+
 Description -
 I used 8 hash functions with b = 4 and r = 2. My hash function was of the form (7*row_index) + (3*i) % 671 . The value of “i” varies from 1 to 8 . A good hash function is one that contains prime numbers thus 7 and 3 were used.
+
 Task 2.1 : Model Based CF
 Python command -
 spark-submit --driver-memory 4g --executor-memory 4g Piyush_Umate_task2_ModelBasedCF.py <rating_file_path> <testing_file_path>
