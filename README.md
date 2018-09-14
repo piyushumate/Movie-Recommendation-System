@@ -30,16 +30,40 @@ Scala command -
 spark-submit --driver-memory 4g --executor-memory 4g --class ModelBasedCF Piyush_Umate_hw3.jar <rating_file_path> <testing_file_path>
  
  ML-Latest - Small data Python output
->=0 and <1: 13761 >=1 and <2: 4149 >=2 and <3: 714 >=3 and <4: 103 >=4: 6
-RMSE: 0.95073628922 Time: 10.8795609474 sec
+ 
+>=0 and <1: 13761
+>=1 and <2: 4149
+>=2 and <3: 714
+>=3 and <4: 103 
+>=4: 6
+
+RMSE: 0.95073628922
+Time: 10.8795609474 sec
+
 ML-Latest - Small data Scala output
->=0 and <1: 13826 >=1 and <2: 4091 >=2 and <3: 708 >=3 and <4: 102 >=4: 6
-RMSE: 0.9479834931653777 Time: 7sec
+>=0 and <1: 13826
+>=1 and <2: 4091
+>=2 and <3: 708
+>=3 and <4: 102 
+>=4: 6
+RMSE: 0.9479834931653777 
+Time: 7sec
+
 ML-20m - Big data Python output
->=0 and <1: 3232631 >=1 and <2: 723767 >=2 and <3: 82068 >=3 and <4: 7655 >=4: 210
-RMSE: 0.817364633871 Time: 1286.95861316 sec
+>=0 and <1: 3232631 
+>=1 and <2: 723767 
+>=2 and <3: 82068 
+>=3 and <4: 7655 
+>=4: 210
+RMSE: 0.817364633871 
+Time: 1286.95861316 sec
+
 ML-20m - Big data Scala output
->=0 and <1: 3232743 >=1 and <2: 723742 >=2 and <3: 82029 >=3 and <4: 7611 >=4: 206
+>=0 and <1: 3232743 
+>=1 and <2: 723742 
+>=2 and <3: 82029 
+>=3 and <4: 7611 
+>=4: 206
 RMSE: 0.8172113310320842 Time: 545sec
 Description -
 For Model Based CF , I used rank as 10 , 12 as the number of iterations and 0.1 as the regularization factor of ALS. I used ParamGridBuilder in tuning different values and then used Regression Evaluator to extract the best parameters.
@@ -62,10 +86,22 @@ Scala command -
 spark-submit --class ItemBasedCF Piyush_Umate_hw3.jar <rating_file_path> <testing_file_path> <jaccard similar movies>
 
 ML-Latest - Small data Python output
->=0 and <1: 13944 >=1 and <2: 5133 >=2 and <3: 959 >=3 and <4: 208 >=4: 12
-RMSE: 1.00286340067 Time: 8.94653177261 sec
+>=0 and <1: 13944
+>=1 and <2: 5133
+>=2 and <3: 959
+>=3 and <4: 208
+>=4: 12
+RMSE: 1.00286340067
+Time: 8.94653177261 sec
+
 ML-Latest - Small data Scala output
->=0 and <1: 13924 >=1 and <2: 5152 >=2 and <3: 955 >=3 and <4: 214 >=4: 11
-RMSE: 1.0049722266060221 Time: 9sec
+>=0 and <1: 13924
+>=1 and <2: 5152
+>=2 and <3: 955
+>=3 and <4: 214
+>=4: 11
+RMSE: 1.0049722266060221
+Time: 9sec
+
 Comparing the result with CF without LSH and answering how LSH could affect the recommendation system?
 While LSH compares the similarity between movies by taking into consideration only whether the user rated the movie or not and not the weight i.e. rating given by the user, LSH could severely affect the recommendation system. LSH in turn causes loss of data in terms of the ratings made by the user. For example, while Pearson correlation takes into consideration the similarity between the ratings of user to predict the rating, LSH only takes into consideration whether a user rated a movie or not but not how good was the rating.
